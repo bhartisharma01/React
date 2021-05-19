@@ -1,0 +1,38 @@
+.heroArea{
+  background-color:#add8e6;
+  padding:30px;
+}
+.todoArea{
+    background-color: #ffffff;
+    margin: auto;
+    width: 500px;
+    height: 565px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #fff;
+}
+.todoHeading{
+    background: #3f51b5;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+.todoText{
+    text-align: center;
+}
+.todoInput:focus-visible{
+    border: none;
+    outline-offset: 0em;
+    outline-width: 0em;
+    border-bottom: 1px solid #3f51b5;
+}
+.todoList{
+    padding:0;
+}
+.addIcon{
+    vertical-align: bottom;
+    font-size: 30px !important;
+}
+.removeIcon{
+    color:#e22c2c;
+}
