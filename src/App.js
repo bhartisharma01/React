@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { createContext, useEffect, useState } from 'react';
+import ComA from './ComA';
+const Firstname = createContext();
+const Lastname =createContext();
+const App =() =>{
+  const [num,setNum]=useState(0);
+   const [nums, setNums] = useState(0);
+  useEffect(()=>{
+    alert('I am clicked');
+  },[num]);
+   useEffect(()=>{
+   document.title=`you clicked me ${nums} times`;
+  },[nums]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Firstname.Provider value={"Bharti "}>
+        <Lastname.Provider value={" Sharma"}>
+          <ComA />
+        </Lastname.Provider>
+      </Firstname.Provider>
+      <button
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >
+        click me {num}
+      </button>
+      <button
+        onClick={() => {
+          setNums(nums + 1);
+        }}
+      >
+        click me {nums}
+      </button>
+    </>
   );
-}
 
+}
 export default App;
+export { Firstname, Lastname };
