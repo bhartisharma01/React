@@ -26,6 +26,7 @@ export class AuthService {
         } catch (error) {
             console.log("error", error)
         }
+        return null;
     }
 
     async getCurrentUser() {
