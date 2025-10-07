@@ -1,11 +1,11 @@
-import { useId } from "react"
-const Input = ({
+import { useId, forwardRef } from "react"
+const Input = forwardRef(({
     children,
     label,
-    type="text",
-    className="",
+    type = "text",
+    className = "",
     ...props
-}) => {
+}, ref) => {
     const id = useId();
     return (
         <div className="w-full">
@@ -18,7 +18,6 @@ const Input = ({
             />
         </div>
     )
-}
-
+})
 export default Input
 

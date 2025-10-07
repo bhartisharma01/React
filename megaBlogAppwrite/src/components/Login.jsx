@@ -39,7 +39,7 @@ const Login = () => {
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
                 <p className="mt-2 text-center text-base text-black/60">
-                    Don't have any account?;
+                    Don't have any account? {" "}
                     <Link
                         to="/signup"
                         className="font-medium text-primary transition-all duration-200 hover:underline"
@@ -73,6 +73,7 @@ const Login = () => {
                         <Button
                             type="submit"
                             className="w-full"
+                            value="Sign In"
                         >Sign in</Button>
                     </div>
                 </form>

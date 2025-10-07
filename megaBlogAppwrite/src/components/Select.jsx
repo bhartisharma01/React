@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useId } from 'react'
 
-const Select = ({
+const Select = forwardRef(({
     options,
     label, 
     className='',
     ...props
-}) => {
+}, ref) => {
     const id = useId();
   return (
     <div className='w-full'>{
@@ -20,7 +20,7 @@ const Select = ({
     </div>
   )
 }
-
+)
 export default Select
 
 

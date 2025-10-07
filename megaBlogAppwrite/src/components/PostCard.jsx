@@ -1,6 +1,8 @@
 import appwriteService from '../auth/blog_service'
 import {Link} from 'react-router-dom'
 const PostCard = ({$id, title, featuredImage}) => {
+  const data = appwriteService.getFilePreview(featuredImage);
+  console.log("checking image data inside postcard....", data)
   return (
       <Link to={`/post/${$id}`}>
         <div className='w-full bg-gray-100 rounded-xl p-4'>
